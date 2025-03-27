@@ -1,0 +1,26 @@
+@media (min-width: 768px) {
+    .hamburger {
+        display: none;
+    }
+
+    .nav-menu {
+        display: flex;
+        position: static;
+        height: auto;
+        width: auto;
+        background-color: transparent;
+        padding: 0;
+        flex-direction: row;
+        gap: 2rem;
+    }
+    
+    main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+    }
+    
+    .grid-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
