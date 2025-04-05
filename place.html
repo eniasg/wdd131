@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Details and Weather Information on Zimbabwe.">
+    <meta name="author" content="Enias Gramu">
+    <title>Zimbabwe</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/place.css"/>
+    <script src="scripts/place.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Zimbabwe</h1>
+    </header>
+
+    <main>
+        <picture>
+            <source srcset="images/lemurs-large.webp" media="(min-width: 768px)">
+            <source srcset="images/lemurs-medium.webp" media="(min-width: 480px)">
+            <img src="images/lemurs-small.webp" alt="Lemurs in Madagascar" />
+        </picture>
+
+        <section class="info">
+        <div class="data-card">
+            <h2>Data</h2>
+            <ul>
+                <li><strong>Area:</strong> 587,041 sq km</li>
+                <li><strong>Population:</strong> 27,691,018</li>
+                <li><strong>Capital:</strong> Antananarivo</li>
+                <li><strong>Languages:</strong> Malagasy, French</li>
+                <li><strong>Currency:</strong> Malagasy Ariary</li>
+                <li><strong>Time Zone:</strong> UTC+3</li>
+                <li><strong>Calling Code:</strong> +261</li>
+                <li><strong>Internet TLD:</strong> .mg</li>
+            </ul>
+        </div>
+
+        <div class="weather-card">
+            <h2>Weather</h2>
+            <ul>
+                <li><strong>Temperature:</strong> <span id="temperature">10</span> °C</li>
+                <li><strong>Conditions:</strong> Partly Cloudy</li>
+                <li><strong>Wind:</strong> <span id="wind">5</span> km/h</li>
+                <li><strong>Wind Chill:</strong> <span id="windchill">N/A</span> °C</li>
+            </ul>
+            <div class="icon-mobile">
+                <img src="images/partly-cloudy.svg" alt="Partly Cloudy" />
+            </div>
+        </div>
+        </section>
+    </main>
+
+  <footer>
+    <p id="currentYear"></p>
+    <p id="lastModified"></p>
+  </footer>
+
+</body>
+</html>
