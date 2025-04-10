@@ -1,0 +1,203 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #4E342E;    /* Deep brown (primary brand color) */
+    --secondary-color: #795548;  /* Medium brown (secondary color) */
+    --accent-color: #D7CCC8;     /* Light beige (accent/background) */
+    --text-dark: #3E2723;        /* Dark brown (body text) */
+    --text-light: #FFF8E1;       /* Off-white (headers/contrast text) */
+    --border-radius: 8px;        /* Consistent rounding */
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    border: 1px solid #bbb;
+    background-color: var(--primary-color);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    color: var(--text-light);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+h2 {
+    color: var(--primary-color);
+    text-align: center;
+}
+
+/* Navigation Menu */
+.nav-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 70%;
+    background-color: var(--primary-color);
+    flex-direction: column;
+    padding: 6rem 2rem;
+    transition: right 0.3s ease;
+    z-index: 999;
+    list-style: none;
+}
+
+.nav-menu.active {
+    right: 0;
+}
+
+.nav-menu a {
+    color: var(--text-light);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius);
+    transition: all 0.3s ease;
+}
+
+.nav-menu a:hover {
+    background-color: var(--secondary-color);
+}
+
+.hamburger {
+    display: block;
+    background: none;
+    border: none;
+    color: var(--text-light);
+    font-size: 1.5rem;
+    cursor: pointer;
+    position: relative;
+    width: 30px;
+    height: 25px;
+    z-index: 1000;
+}
+
+.hamburger span {
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: var(--text-light);
+    left: 0;
+    transition: all 0.3s ease;
+}
+
+.hamburger span:nth-child(1) { top: 0; }
+.hamburger span:nth-child(2) { top: 10px; }
+.hamburger span:nth-child(3) { top: 20px; }
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg);
+    top: 10px;
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg);
+    top: 10px;
+}
+
+/* Grid for temple cards */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem;
+}
+
+/* Temple Card Style */
+figure {
+    background-color: var(--text-light);
+    border: 1px solid var(--primary-color);
+    overflow: hidden;
+    padding: 1rem;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+figure:hover {
+    transform: scale(1.02);
+}
+
+figcaption {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+figcaption h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+    color: var(--primary-color);
+}
+
+/* Caption Details */
+figcaption p {
+    /* margin: 0.3rem 0; */
+    font-size: 0.95rem;
+    color: var(--primary-color);
+}
+  
+figcaption strong {
+    font-variant: small-caps;
+    color: #800080;
+    font-weight: 600;
+}
+
+/* Temple image */
+figure img {
+    margin-top: 0.3rem;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    box-shadow: 0 0 10px 5px var(--primary-color);
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    border: 1px solid #bbb;
+    text-align: center;
+    padding: 1rem;
+    margin: 1rem auto;
+}
+
+@media (min-width: 768px) {
+    .hamburger {
+        display: none;
+    }
+
+    .nav-menu {
+        display: flex;
+        position: static;
+        height: auto;
+        width: auto;
+        background-color: transparent;
+        padding: 0;
+        flex-direction: row;
+        gap: 2rem;
+    }
+    
+    main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+    }
+    
+    .grid-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
