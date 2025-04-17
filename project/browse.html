@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals. Aspindale SkillSwap Platform - Browse Page.">
+    <meta name="author" content="Enias Gramu">
+    <title>WDD 131 - Dynamic Web Fundamentals - Aspindale SkillSwap - Browse Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/skillswap.css">
+    <link rel="stylesheet" href="styles/mobile.css" media="screen and (max-width: 768px)">
+    <script src="scripts/skillswap.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="images/logo.svg" alt="Aspindale SkillSwap Logo" width="150" height="60" loading="lazy">
+            <h1>Aspindale SkillSwap</h1>
+        </div>
+        <nav>
+            <button id="menu-button" aria-label="Toggle navigation menu">☰</button>
+            <ul id="nav-menu">
+                <li class="active"><a href="index.html">Home</a></li>
+                <li><a href="browse.html">Browse Skills</a></li>
+                <li><a href="post.html">Post a Skill</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="search-section">
+            <h2>Find Skills in Aspindale</h2>
+            <form id="search-form">
+                <input type="text" id="search-input" placeholder="Search for skills..." aria-label="Search for skills">
+                <select id="category-filter" aria-label="Filter by category">
+                    <option value="all">All Categories</option>
+                    <option value="tutoring">Tutoring</option>
+                    <option value="home">Home Services</option>
+                    <option value="creative">Creative</option>
+                    <option value="tech">Technology</option>
+                </select>
+                <button type="submit">Search</button>
+            </form>
+        </section>
+
+        <section class="all-skills">
+            <h2>Available Skills</h2>
+            <div class="skills-grid" id="all-skills-container">
+
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="browse.html">Browse Skills</a></li>
+                    <li><a href="post.html">Post a Skill</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Email: info@aspindaleskillswap.com</p>
+                <p>Phone: +263 123 4567</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p id="currentYear"></p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+</body>
+</html>

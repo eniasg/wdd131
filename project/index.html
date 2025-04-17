@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals. Aspindale SkillSwap Platform.">
+    <meta name="author" content="Enias Gramu">
+    <title>WDD 131 - Dynamic Web Fundamentals - Aspindale SkillSwap</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/skillswap.css">
+    <link rel="stylesheet" href="styles/mobile.css" media="screen and (max-width: 768px)">
+    <script src="scripts/skillswap.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="images/logo.svg" alt="Aspindale SkillSwap Logo" width="150" height="60" loading="lazy">
+            <h1>Aspindale SkillSwap</h1>
+        </div>
+        <nav>
+            <button id="menu-button" aria-label="Toggle navigation menu">☰</button>
+            <ul id="nav-menu">
+                <li class="active"><a href="index.html">Home</a></li>
+                <li><a href="browse.html">Browse Skills</a></li>
+                <li><a href="post.html">Post a Skill</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <img src="images/hero.jpg" alt="People exchanging skills" width="1200" height="600" loading="lazy">
+            <div class="hero-text">
+                <h2>Trade Skills, Build Community</h2>
+                <p>Connect with neighbors to exchange services without money</p>
+                <a href="post.html" class="cta-button">Offer Your Skills</a>
+            </div>
+        </section>
+
+        <section class="featured-skills">
+            <h2>Recently Offered Skills</h2>
+            <div class="skills-grid" id="featured-skills-container">
+
+            </div>
+        </section>
+
+        <section class="how-it-works">
+            <h2>How SkillSwap Works</h2>
+            <div class="steps">
+                <div class="step">
+                    <span class="step-number">1</span>
+                    <h3>Post Your Skill</h3>
+                    <p>Tell the community what you can offer and what you need in return</p>
+                </div>
+                <div class="step">
+                    <span class="step-number">2</span>
+                    <h3>Find a Match</h3>
+                    <p>Browse skills or respond to requests from others</p>
+                </div>
+                <div class="step">
+                    <span class="step-number">3</span>
+                    <h3>Make the Exchange</h3>
+                    <p>Arrange a time and place to swap your skills</p>
+                </div>
+            </div>
+        </section>
+    </main> 
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="browse.html">Browse Skills</a></li>
+                    <li><a href="post.html">Post a Skill</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Email: info@aspindaleskillswap.com</p>
+                <p>Phone: +263 123 4567</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p id="currentYear"></p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+</body>
+</html>

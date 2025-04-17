@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals. Aspindale SkillSwap Platform - Post Page.">
+    <meta name="author" content="Enias Gramu">
+    <title>WDD 131 - Dynamic Web Fundamentals - Aspindale SkillSwap - Post Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/skillswap.css">
+    <link rel="stylesheet" href="styles/mobile.css" media="screen and (max-width: 768px)">
+    <script src="scripts/skillswap.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="images/logo.svg" alt="Aspindale SkillSwap Logo" width="150" height="60" loading="lazy">
+            <h1>Aspindale SkillSwap</h1>
+        </div>
+        <nav>
+            <button id="menu-button" aria-label="Toggle navigation menu">☰</button>
+            <ul id="nav-menu">
+                <li class="active"><a href="index.html">Home</a></li>
+                <li><a href="browse.html">Browse Skills</a></li>
+                <li><a href="post.html">Post a Skill</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="post-skill">
+            <h2>Offer Your Skill to the Community</h2>
+            <form id="skill-form">
+                <div class="form-group">
+                    <label for="skill-name">Skill/Service Name*</label>
+                    <input type="text" id="skill-name" required aria-required="true">
+                </div>
+
+                <div class="form-group">
+                    <label for="skill-category">Category*</label>
+                    <select id="skill-category" required aria-required="true">
+                        <option value="">Select a category</option>
+                        <option value="tutoring">Tutoring/Education</option>
+                        <option value="home">Home Services</option>
+                        <option value="creative">Creative Arts</option>
+                        <option value="tech">Technology</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="skill-description">Description*</label>
+                    <textarea id="skill-description" rows="4" required aria-required="true"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="skill-offer">What You're Offering*</label>
+                    <input type="text" id="skill-offer" required aria-required="true">
+                </div>
+
+                <div class="form-group">
+                    <label for="skill-request">What You're Looking For*</label>
+                    <input type="text" id="skill-request" required aria-required="true">
+                </div>
+
+                <div class="form-group">
+                    <label for="contact-method">Preferred Contact Method*</label>
+                    <select id="contact-method" required aria-required="true">
+                        <option value="">Select contact method</option>
+                        <option value="email">Email</option>
+                        <option value="phone">Phone</option>
+                        <option value="whatsapp">WhatsApp</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="contact-info">Contact Information*</label>
+                    <input type="text" id="contact-info" required aria-required="true">
+                </div>
+
+                <button type="submit">Post Your Skill</button>
+            </form>
+        </section>
+
+        <section class="post-guidelines">
+            <h2>Posting Guidelines</h2>
+            <ul>
+                <li>Be clear and specific about what you're offering</li>
+                <li>Include any requirements (tools, space, etc.)</li>
+                <li>Be realistic about time commitments</li>
+                <li>No monetary exchanges - this is a barter system</li>
+                <li>Be respectful and professional</li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="browse.html">Browse Skills</a></li>
+                    <li><a href="post.html">Post a Skill</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Email: info@aspindaleskillswap.com</p>
+                <p>Phone: +263 123 4567</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p id="currentYear"></p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+</body>
+</html>
