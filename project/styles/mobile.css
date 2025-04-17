@@ -1,0 +1,54 @@
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
+    #menu-button {
+        display: block;
+    }
+
+    #nav-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    #nav-menu.show {
+        display: flex;
+    }
+
+    .hero-text h2 {
+        font-size: 1.5rem;
+    }
+
+    .how-it-works .steps {
+        grid-template-columns: 1fr;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    main {
+        padding: 1rem;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Tablet Styles */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .how-it-works .steps {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .steps .step:last-child {
+        grid-column: span 2;
+        max-width: 50%;
+        justify-self: center;
+    }
+}
